@@ -10,15 +10,15 @@ group :production do
   gem 'pg'
 end
 
-group :develepment do
+group :development do
+  gem 'sqlite3'
   gem 'rspec-rails', '2.0.1'
-  gem 'sqlite3', '1.3.6'
 end
 
 group :test do
+  gem 'sqlite3'
   gem 'rspec', '2.0.1'
   gem 'webrat', '0.7.1'
-  gem 'sqlite3', '1.3.6'
 end
 
 
