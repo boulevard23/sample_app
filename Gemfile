@@ -12,12 +12,12 @@ end
 
 group :development do
   gem 'sqlite3'
-  gem 'rspec-rails'
+  gem 'rspec-rails', '2.10.1'
 end
 
 group :test do
   gem 'sqlite3'
-  gem 'rspec'
+  gem 'rspec', '2.10.0'
   gem 'webrat', '0.7.1'
 end
 
