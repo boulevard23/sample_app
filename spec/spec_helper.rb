@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'spork'
+require 'capybara/rspec'
 #uncomment the following line to use spork with the debugger
 #require 'spork/ext/ruby-debug'
 
@@ -13,7 +14,7 @@ Spork.prefork do
   end
 
   require 'rspec/rails'
-  
+
   # Requires supporting files with custom matchers and macros, etc,
   # in ./support/ and its subdirectories.
   Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each {|f| require f}
@@ -105,4 +106,6 @@ RSpec.configure do |config|
   # examples within a transaction, remove the following line or assign false
   # instead of true.
   config.use_transactional_fixtures = true
+
+  config.include Rails.application.routes.url_helpers
 end
