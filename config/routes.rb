@@ -1,5 +1,5 @@
 SampleApp::Application.routes.draw do
-  get "users/new"
+  resources :users
 
   # get "pages/home"
   root to: 'pages#home'
